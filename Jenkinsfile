@@ -9,12 +9,12 @@ pipeline {
                 sh 'mvn verify'
             }
         }
-        // stage ('Jacoco') {
-        //     steps {
-        //         echo 'Code Coverage'
-        //         jacoco()
-        //     }
-        // }
+        stage ('Jacoco') {
+            steps {
+                echo 'Code Coverage'
+                jacoco()
+            }
+        }
         stage('Record Coverage') {
             when { branch 'master' }
             steps {
