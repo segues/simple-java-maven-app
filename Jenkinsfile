@@ -1,3 +1,5 @@
+def coverageBadge = addEmbeddableBadgeConfiguration(id: "coverage", subject: "Test coverage")
+
 pipeline {
     agent any
     options {
@@ -20,7 +22,7 @@ pipeline {
             steps {
                 script {
                     currentBuild.result = 'SUCCESS'
-                 }
+                }
                 step([$class: 'MasterCoverageAction', scmVars: [GIT_URL: env.GIT_URL]])
             }
         }
@@ -29,9 +31,12 @@ pipeline {
             steps {
                 script {
                     currentBuild.result = 'SUCCESS'
-                 }
+                }
                 step([$class: 'CompareCoverageAction', publishResultAs: 'statusCheck', scmVars: [GIT_URL: env.GIT_URL]])
             }
+        }
+        stage ('Badge coverage') {
+            
         }
     }
     post {
