@@ -1,6 +1,6 @@
 # simple-java-maven-app
 
-[![Build Status](http://localhost:8080/buildStatus/icon?job=simple-java-maven-app%2Fmaster)](http://localhost:8080/job/simple-java-maven-app/job/master/)
+[![Build Status](http://localhost:8080/job/simple-java-maven-app/job/master/badge/icon)](http://localhost:8080/job/simple-java-maven-app/job/master/)
 
 This repository is for the
 [Build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)
